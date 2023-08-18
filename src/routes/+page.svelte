@@ -19,7 +19,7 @@
   }
   .countries {
     box-shadow: 0 0 4px #999;
-    height: 70vh;
+    height: 80vh;
     overflow-y: auto;
   }
   .countries-grid {
@@ -37,6 +37,12 @@
     display:flex;
     align-items:center;
     height:12rem;
+  }
+  @media screen and (max-width:480px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 </style>
 
