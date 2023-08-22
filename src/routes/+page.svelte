@@ -60,16 +60,16 @@
 </style>
 
 <main class={mode}>
-  <nav class="navbar navbar-bg px-4">
-    <h1 class="fs-1 fw-bold">Where in the world?</h1>
-    <button class="btn btn-primary" on:click={toggleMode}>{modeLabel}</button>
+  <nav class="">
+    <h1 class="text-3xl font-bold">Where in the world?</h1>
+    <button class="bg-{mode=='dark' ? 'gray' : 'white'}-700 border text-{mode=='dark'?'white':'gray'} px-4 p-1 rounded-md" on:click={toggleMode}>{modeLabel}</button>
   </nav>
   <nav class="px-4">
     <div>
-      <input type="search" bind:value={searchCountry} class="form-control" />
+      <input type="search" bind:value={searchCountry} class="border-2 p-1 rounded-md" />
     </div>
     <div>
-      <select bind:value={searchRegion} class="form-control">
+      <select bind:value={searchRegion} class="border-2 p-1 rounded-md">
         {#if !searchRegion}<option value="">- Filter by Region -</option>{/if}
         <option value="">All</option>
         {#each regions as rgn}
@@ -78,18 +78,16 @@
       </select>
     </div>
   </nav>
-  <div class="countries">
-    <div class="countries-grid">
+  <div>
+    <div class="flex flex-wrap justify-around">
       {#each data.filter(f => filterRow(f)) as row}
-        <a href={`/${row.alpha3Code}`}>
-          <div class="card">
-            <figure>
-              <img src={row.flags.png} alt="flag" />
+        <a href={`/${row.alpha3Code}`} class="mb-4 p-4">
+          <div class="border-2 rounded-md md:p-1 md:pb-4 pb-1 md:w-[16vw] w-full flex flex-col items-center">
+            <figure class="mb-4">
+              <img height="100" src={row.flags.png} alt="flag" />
             </figure>
-            <div class="card-body">
-              <h3 class="card-title">
-                <div>{row.name}</div>
-              </h3>
+            <div>
+              <div class="md:text-2xl">{row.name}</div>
               <div>Population: {row.population}</div>
               <div>Region: {row.region}</div>
               <div>Capital: {row.capital}</div>

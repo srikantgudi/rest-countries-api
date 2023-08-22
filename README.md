@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/srikantgudi/rest-countries-api)
-- [Live Site URL](https://rest-countries-api-steel.vercel.app/)
+- [Live Site URL](https://rest-countries-api-srikantgudi.vercel.app/)
 
 ## My process
 
