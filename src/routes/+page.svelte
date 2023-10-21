@@ -61,7 +61,7 @@
       </button>
     </nav>
     <nav>
-      <div class="border p-2 w-[24rem]">
+      <div class="border p-2 w-[24rem] rounded-lg">
         <i class="fa fa-search px-2"></i>
         <input type="search" bind:value={searchCountry} class="bg-{$mode === 'dark' ? '[hsl(209,209,209)]' : 'white'} w-[90%] outline-0 p-1" />
       </div>
@@ -78,7 +78,7 @@
     <div>
       <div class="flex md:flex-row md:flex-wrap flex-col justify-between gap-1">
         {#each data.filter(f => filterRow(f)) as row}
-          <a href={`/${row.alpha3Code}`} class="mb-4 flex border border-white-{$mode=='dark' ? '100' : '400'} flex-wrap items-between justify-around">
+          <a href={`/${row.alpha3Code}`} class="rounded-t-lg mb-4 flex border border-white-{$mode=='dark' ? '100' : '400'} flex-wrap items-between justify-around">
             <div class="rounded-t-lg pb-1 md:w-[18rem] w-full shadow-md">
               <img height="100" src={row.flags.png} alt="flag" class="object-top rounded-t-lg mb-4 h-[12rem] w-full" />
               <div class="p-1 px-8 leading-md">
