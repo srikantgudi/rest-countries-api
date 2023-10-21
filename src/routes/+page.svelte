@@ -63,7 +63,7 @@
     <nav>
       <div class="border p-2 w-[24rem]">
         <i class="fa fa-search px-2"></i>
-        <input type="search" bind:value={searchCountry} class={`outline-0 p-1 dark:bg-[hsl(209,209,209)] dark:text-white`} />
+        <input type="search" bind:value={searchCountry} class="w-[90%] outline-0 p-1" />
       </div>
       <div class="text-{textColor}">
         <select bind:value={searchRegion} class="border-2 p-1 text-{$mode==="dark" ? "white" : "hsl(209,209,209)"} bg-{$mode==='dark'? 'slate-900': 'white'} relative rounded-md">
