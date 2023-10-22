@@ -22,12 +22,14 @@
         <div>Alpha2Code: {data.row.alpha2Code}</div>
         <div>Alpha3code: {data.row.alpha3Code}</div>
         <div>Sub-Region: {data.row.subregion}</div>
-        <div>Borders:</div>
-        <div class="flex gap-4 mt-2">
-          {#each data.row.borders as item}
-          <a href={`/${item}`} class="border rounded hover:bg-slate-300 p-1 px-2">{item}</a>
-          {/each}
-        </div>
+        {#if data.row.borders}
+          <div>Borders:</div>
+          <div class="flex flex-wrap gap-2 mt-2">
+            {#each data.row.borders as item}
+            <a href={`/${item}`} class="border rounded hover:bg-slate-300 p-1 px-2">{item}</a>
+            {/each}
+          </div>
+        {/if}
       </div>
     </div>
   </div>
