@@ -70,7 +70,7 @@ const toggleMode = () => {
         <div class="flex md:flex-row md:flex-wrap flex-col md:justify-between justify-around gap-1">
           {#each data.filter(f => filterRow(f)) as row}
             <a href={`/${row.alpha3Code}`} class="rounded-t-lg w-[20rem] mb-4 flex flex-wrap items-between justify-around">
-              <div class="rounded-t-lg pb-1 md:w-[18rem] w-full md:shadow-slate-300 shadow-slate-200 shadow-md md:shadow-xl hover:shadow-2xl">
+              <div class="rounded-t-lg pb-1 md:w-[18rem] w-full md:shadow-slate-300 shadow-slate-200 shadow-md md:shadow-md">
                 <img height="100" src={row.flags.png} alt="flag" class="object-top rounded-t-lg mb-4 h-[12rem] w-full" />
                 <div class="text-left p-1 px-8 leading-md">
                   <div class="md:text-lg font-bold">{row.name}</div>
